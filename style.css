@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgb(84, 84, 237);
+}
+.container{
+    background-color: rgb(254, 249, 249);
+    width: 60%;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+   /* margin-left: 26%; */
+   margin: 80px 0 0 26%;
+   gap: 20px;
+}
+#password{
+   margin: 20px 0 20px 0;
+}
+#signInF, #signUpF{
+    margin: 15px 0 15px 0; 
+}
+.container .login-box{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    width: 90%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+input{
+height: 25px;
+width: 80%;
+
+}
+
+#username{
+    margin-bottom: 20px;
+}
+button{
+    width: 80%;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+}
+#login{
+    width: 50%;
+    background-color: #0b9080;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+ 
+}
+#signInF, #signUpF{
+    background-color: #2e518f;
+    color: white;
+}
+
+#signInG, #signUpG {
+    background-color: #e75933;
+    color: white;
+}
+p a {
+    text-decoration: none;
+    color: #0b9080;
+}
+.second{
+    
+    height: 100%;
+    width: 50%;
+}
+#create{
+    color: #0b9080;
+    margin-top: 10px;
+    font-size: 10px;
+}

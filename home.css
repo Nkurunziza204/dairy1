@@ -1,0 +1,30 @@
+h3{
+    color: blue;
+}
+
+button{
+    background-color: blue;
+    color: white;
+    font-size: larger;
+}
+
+
+/* button{
+    background-color: blue;
+    padding: 5px;
+    color: white;
+    margin-top: 15px;
+ }
+ 
+ h3{
+     color: blue;
+ 
+ }
+ textarea{
+     width: 30%;
+ }
+ 
+ div{
+     display: flex;
+     flex-direction: column;
+ } */

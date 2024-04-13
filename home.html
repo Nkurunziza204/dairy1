@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+
+    
+
+   <div class="yetu">
+    
+    <h3>Dairy Entry</h3>
+    <textarea id="secretContent" placeholder="write here entries"></textarea> <br>
+    <button id="save_entry">Save</button> 
+    <button id="logOut">sign out</button>
+
+     <p id="message"></p>
+    
+    </div>
+
+       
+    <div id="entryview"></div>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+    
+<script src="javascript/config.js"></script>
+<script src="javascript/home.js"></script>
+    
+</body>
+</html>
