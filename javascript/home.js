@@ -1,13 +1,13 @@
-firebase.auth().onAuthStateChanged(async (user) =>{
+firebase.auth().onAuthStateChanged(async (user) => {
     if (user) {
 
         // logout the user
 
-        document.getElementById("logOut").addEventListener("click", async () =>{
-         try{
+        document.getElementById("logOut").addEventListener("click", async () => {
+         try {
             await firebase.auth().signOut();
             window.location.href = "/index.html";
-         } catch (error){
+         } catch (error) {
             console.log(error.message);
          }
         });
@@ -17,18 +17,19 @@ firebase.auth().onAuthStateChanged(async (user) =>{
         document.getElementById("save_entry").addEventListener("click", async () => {
             
             try {
-                let save_entry = document.getElementById("save_entry").value;
+                let save_entry = document.getElementById("secretContent").value;
                 let entry = await firebase.firestore().collection("DairyEntries").doc();
                 
                 entry.set({
                     save_entry,
                     user: user.uid,
-                    entry: entry.id
+                    entry: entry.id,
                     
                 });
+                
                 // window.location.reload();
             }
-            catch(error){
+            catch (error) {
                 console.error("Error adding enrtry:", error);
             }
         });
@@ -44,29 +45,29 @@ firebase.auth().onAuthStateChanged(async (user) =>{
         let entryId = entryDoc.data().entry;
 
         // FETCH USER SPECIFIC DAIRY ENTRIES
-
+        console.log("message")
 
         let userId = user.uid;
 
         if (userId == entryUserId) {
             content += `<div class='diaryEntry' onclick='navigateToDisplayPage("${entryId}")'>`;
             content += `<p>${entryMessage}</p>`;
-            // content += "<p>" + entryMessage + "</p>";
+            // content += `<p>${entryUserId}</p>`;
             content += "</div>";
 
             // console.log(entryUserId);
             // console.log(entryMessage);
         }
-        else{
+        else {
             console.log("not your secrets");
         }
        })
-       $("#entryview").append(content)
+       $("#entryView").append(content);
     
-    Window.navigateToDisplayPage = (entryId) => {
+    window.navigateToDisplayPage = (entryId) => {
         window.location.href = `display.html?${entryId}`;
     };
-    }else{
+    } else {
         window.location.href = "/index.html";
     }
 });
